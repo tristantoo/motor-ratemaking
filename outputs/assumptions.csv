@@ -1,0 +1,11 @@
+assumption,value,basis
+Experience losses,60280571,estimated: capped losses x excess factor
+Exposure,353721,data
+Large loss cap,35651 per claim,estimated: 99.5th pct of train claims
+Excess loss factor,1.3601,estimated: train
+Loss development factor,1.00,assumed (data treated as ultimate)
+Annual loss trend,3% for 2 years,illustrative
+ULAE load,10% of loss,illustrative
+Variable expense ratio,25%,illustrative
+Profit and contingency,5%,illustrative
+Current premium,94943651,"assumed: incumbent plan priced at experience period cost, no trend"

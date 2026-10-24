@@ -1,0 +1,142 @@
+{
+  "data": {
+    "policies_raw": 678013,
+    "idpol_le_24500_dropped": [
+      {
+        "policies": 9139,
+        "claims_in_freq": 9675,
+        "sev_records": 302
+      }
+    ],
+    "policies": 668874,
+    "train": 535099,
+    "test": 133775,
+    "claims": 26142,
+    "counts_replaced_from_severity_file": 266,
+    "exposure_years": 353720.601692,
+    "large_loss_cap": 35650.7824,
+    "excess_factor": 1.360144,
+    "split": "random 80/20 stratified by claim count (0, 1, 2+), seed 2026; NOT forward chaining"
+  },
+  "overdispersion": {
+    "pearson_dispersion_poisson": 1.823808,
+    "nb_theta": 1.167208,
+    "aic_poisson": 169372.477239,
+    "aic_nb": 168958.940477,
+    "max_abs_rel_coef_gap": 0.014083
+  },
+  "severity_relativities_used": false,
+  "holdout": {
+    "proposed_glm_vs_exposure_only": {
+      "pct_reduction": 5.08567,
+      "lo95": 4.560482,
+      "hi95": 5.59583,
+      "B": 1000
+    },
+    "proposed_glm_vs_current_glm": {
+      "pct_reduction": 0.545257,
+      "lo95": 0.353785,
+      "hi95": 0.726442,
+      "B": 1000
+    },
+    "gbm_vs_proposed_glm": {
+      "pct_reduction": 1.684315,
+      "lo95": 1.377291,
+      "hi95": 2.003076,
+      "B": 1000
+    },
+    "glm_interaction_vs_proposed": {
+      "pct_reduction": 0.354123,
+      "lo95": 0.237867,
+      "hi95": 0.482172,
+      "B": 1000
+    },
+    "gbm_vs_glm_interaction": {
+      "pct_reduction": 1.334919,
+      "lo95": 1.027933,
+      "hi95": 1.651165,
+      "B": 1000
+    },
+    "severity_glm_vs_mean": {
+      "pct_reduction": -0.032256,
+      "lo95": -0.867153,
+      "hi95": 0.850445,
+      "B": 1000
+    }
+  },
+  "gini": [
+    {
+      "model": "current GLM (frequency)",
+      "gini": 0.2809
+    },
+    {
+      "model": "proposed GLM (frequency)",
+      "gini": 0.3024
+    },
+    {
+      "model": "GBM (frequency)",
+      "gini": 0.3347
+    },
+    {
+      "model": "current plan (pure premium)",
+      "gini": 0.2942
+    },
+    {
+      "model": "proposed GLM (pure premium)",
+      "gini": 0.3264
+    }
+  ],
+  "gbm": {
+    "best_iteration": 1083,
+    "params": {
+      "objective": "count:poisson",
+      "eta": 0.05,
+      "max_depth": 4,
+      "min_child_weight": 50,
+      "subsample": 0.8,
+      "tree_method": "hist",
+      "nthread": 4,
+      "seed": 2026,
+      "eval_metric": "poisson-nloglik"
+    }
+  },
+  "indication": {
+    "indicated_change": 0.058475,
+    "assumptions": {
+      "ldf": 1,
+      "trend": 0.03,
+      "years": 2,
+      "ulae": 0.1,
+      "var_exp": 0.25,
+      "profit": 0.05,
+      "cap_q": 0.995,
+      "cred_full": 1082,
+      "change_cap": 0.15
+    }
+  },
+  "dislocation": {
+    "table": [
+      {
+        "band": "below -10%",
+        "share_of_policies": 0.2901
+      },
+      {
+        "band": "-10% to +10%",
+        "share_of_policies": 0.443
+      },
+      {
+        "band": "above +10%",
+        "share_of_policies": 0.2668
+      }
+    ],
+    "quantiles": {
+      "1%": -0.318145,
+      "10%": -0.198723,
+      "50%": -0.005514,
+      "90%": 0.217869,
+      "99%": 0.410972
+    }
+  },
+  "capped_cells": 8,
+  "cells": 68
+}

@@ -1,0 +1,6 @@
+model,gini
+current GLM (frequency),0.2809
+proposed GLM (frequency),0.3024
+GBM (frequency),0.3347
+current plan (pure premium),0.2942
+proposed GLM (pure premium),0.3264

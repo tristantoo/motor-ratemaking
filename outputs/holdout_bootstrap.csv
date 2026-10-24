@@ -1,0 +1,7 @@
+comparison,pct_deviance_reduction,lo95,hi95
+proposed_glm_vs_exposure_only,5.086,4.56,5.596
+proposed_glm_vs_current_glm,0.545,0.354,0.726
+gbm_vs_proposed_glm,1.684,1.377,2.003
+glm_interaction_vs_proposed,0.354,0.238,0.482
+gbm_vs_glm_interaction,1.335,1.028,1.651
+severity_glm_vs_mean,-0.032,-0.867,0.85

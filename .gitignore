@@ -1,0 +1,4 @@
+data/raw/
+.Rhistory
+.RData
+outputs/run.log
